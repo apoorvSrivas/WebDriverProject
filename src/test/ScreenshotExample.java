@@ -25,7 +25,7 @@ public class ScreenshotExample {
 		File fileObj = obj.getScreenshotAs(OutputType.FILE);
 //		File screenshot = new File("/Users/apoorvsrivastava/Downloads/SeleniumScreenShots/image.jpg");  // If we want screenshots to be saved here in WebDriverProject, we can simply write file name like "image.jpg"
 		
-		File screenshot = new File("src/Screenshots/image1.jpg");
+		File screenshot = new File("src/Screenshots/image1.jpg");  // No forward slash before src
 		FileUtils.copyFile(fileObj, screenshot );
 		
 	}

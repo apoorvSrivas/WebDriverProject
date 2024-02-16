@@ -29,7 +29,7 @@ public class FinalProjectWebdriverAmazon {
 		List<WebElement> allMobile = driver.findElements(By.xpath("//div[@class='a-section']//h2//span"));
 		List<WebElement> mobilePrice = driver.findElements(By.xpath("//div[@class='a-section']//span[@class='a-price-whole']"));
 		
-		Iterator<WebElement> it1 = allMobile.iterator(); 
+		Iterator<WebElement> it1 = allMobile.iterator();    // Here I used Iterator so that both name and price can be printed one by one
 		Iterator<WebElement> it2 = mobilePrice.iterator(); 
 		
 		while(it1.hasNext() && it2.hasNext())
@@ -43,16 +43,16 @@ public class FinalProjectWebdriverAmazon {
 		
 		
 		
-//		for(WebElement mobName : allMobile)
+//		for(WebElement mobName : allMobile)     // This logic is for printing all phone name and then all prices. 
 //		{
 //			System.out.println("Name of mobile: "+mobName.getText());
-//			
-//			for(WebElement mobPrice : mobilePrice)
-//			{
-//				System.out.println("Price of mobile: "+mobPrice.getText());
-//			}
-//			System.out.println();
 //		}
+//			
+//		for(WebElement mobPrice : mobilePrice)
+//		{
+//			System.out.println("Price of mobile: "+mobPrice.getText());
+//		}
+
 		
 	}
 

@@ -28,10 +28,12 @@ public class FinalProjectWebdriverAmazon {
 		
 		List<WebElement> allMobile = driver.findElements(By.xpath("//div[@class='a-section']//h2//span"));
 		List<WebElement> mobilePrice = driver.findElements(By.xpath("//div[@class='a-section']//span[@class='a-price-whole']"));
+		List<WebElement> currencySymbol = driver.findElements(By.xpath("//div[@class='a-section']//span[@class='a-price-symbol']"));
 		
+		
+		// Logic 1st to print name and price one by one like mobile name with price
 		Iterator<WebElement> it1 = allMobile.iterator();    // Here I used Iterator so that both name and price can be printed one by one
 		Iterator<WebElement> it2 = mobilePrice.iterator(); 
-		
 		while(it1.hasNext() && it2.hasNext())
 		{
 			WebElement value1= it1.next();
@@ -40,20 +42,13 @@ public class FinalProjectWebdriverAmazon {
 			System.out.println("Price of mobile: "+value2.getText());
 		}
 		
+		// Logic 2nd to print name and price one by one like mobile name with price
+		for(int i=0; i<allMobile.size(); i++)
+		{
+			System.out.println("Mobile: "+allMobile.get(i).getText());
+			System.out.println("Price: "+currencySymbol.get(i).getText()+" "+mobilePrice.get(i).getText());
+		}
 		
-		
-		
-//		for(WebElement mobName : allMobile)     // This logic is for printing all phone name and then all prices. 
-//		{
-//			System.out.println("Name of mobile: "+mobName.getText());
-//		}
-//			
-//		for(WebElement mobPrice : mobilePrice)
-//		{
-//			System.out.println("Price of mobile: "+mobPrice.getText());
-//		}
-
-		
+			
 	}
-
 }
